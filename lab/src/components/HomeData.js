@@ -6,6 +6,7 @@ function HomeData(props) {
       <p>{props.user}</p>
       <h4>{props.heading}</h4>
       <p>{props.text}</p>
+      <p className="tags">{props.tags}</p>
     </div>
   );
 }
