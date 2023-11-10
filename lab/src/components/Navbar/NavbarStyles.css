@@ -1,8 +1,8 @@
 .navbar {
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
   height: 80px;
   width: 100%;
@@ -21,7 +21,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(3, auto);
   grid-gap: 30px;
   list-style: none;
   align-items: center;
@@ -30,6 +30,7 @@
 .buttons {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 
 .buttons a {
@@ -44,18 +45,4 @@
   background-color: #8c8c8c4a;
   padding: 5px;
   text-shadow: 0px 0px 0px black;
-}
-
-.icons {
-  display: flex;
-  gap: 40px;
-}
-
-.icons a {
-  transition: all 0.2s ease-in-out;
-}
-
-.icons a:hover {
-  background-color: #8c8c8c4a;
-  padding: 9px;
 }

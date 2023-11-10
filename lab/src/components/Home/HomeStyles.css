@@ -1,11 +1,20 @@
+.home {
+  padding-top: 150px;
+  overflow: hidden;
+}
+
 h2 {
-  margin: 2rem 6rem;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.11);
   border-radius: 7px;
-  padding: 1rem 0.8rem;
+  font-size: 30px;
+  padding: 20px;
+  padding-bottom: 20px;
+  margin-left: 7%;
+  width: 86%;
 }
 
 .home-posts {
+  padding-top: 20px;
   position: relative;
   margin: 0 6rem;
 }
@@ -30,6 +39,11 @@ h2 {
   margin: 10px 10px 10px 0;
 }
 
+.p-card p {
+  width: 33rem;
+}
+
 .tags {
-  margin-top: 170px;
+  padding-top: 10px;
+  position: relative;
 }

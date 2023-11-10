@@ -1,8 +1,6 @@
 import "./PostStyles";
 
 function Posts() {
-  return <>
-  
-  </>;
+  return <></>;
 }
 export default Posts;
