@@ -1,0 +1,49 @@
+.container {
+  width: 80%;
+  position: relative;
+  margin: 0 8rem;
+  padding-top: 130px;
+}
+
+.post-box {
+  text-align: end;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.11);
+  border-radius: 7px;
+  height: 39rem;
+  padding: 20px;
+}
+
+.titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+}
+
+.titles p {
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+label {
+  display: flex;
+  margin-top: 10px;
+}
+
+#title {
+  height: 40px;
+  width: 100%;
+}
+
+#body {
+  height: 26rem;
+  width: 100%;
+}
+
+.post-btn {
+  width: 70px;
+  margin-top: 10px;
+}

@@ -24,22 +24,21 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <h1 className="logo">Reddit</h1>
+      <h1 className="logo">
+        <Link to="/">Reddit</Link>
+      </h1>
       <ul className="nav-menu">
         <div className="buttons">
           <Link to="/">Home</Link>
-          <Link to="/explore">Explore</Link>
-          <Link to="" onClick={togglePlusDropdown}>
-            +
-          </Link>
+          <div onClick={togglePlusDropdown}>+</div>{" "}
           <div className={`dropdown-menu ${openPlus ? `active` : `inactive`}`}>
             <ul>
               <Dropdown text={"Add a post"} />
             </ul>
           </div>
-          <Link to="" onClick={toggleUserDropdown}>
+          <div onClick={toggleUserDropdown}>
             <FontAwesomeIcon icon={faUserCircle} style={{ color: "#000000" }} />
-          </Link>
+          </div>
           <div
             className={`dropdown-acc-menu ${
               openUserDropdown ? "active" : "inactive"

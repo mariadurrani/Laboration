@@ -1,17 +1,19 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import FetchPosts from "./components/Fetch/FetchPosts.js";
+import FetchUsers from "./components/Fetch/FetchUsers";
 import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NewPost from "./components/NewPost/NewPost";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
-        <Home />
+        <FetchUsers />
         <Routes>
-          <Route path="/" exact component={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/newpost" element={<NewPost />} />
         </Routes>
       </Router>
     </div>

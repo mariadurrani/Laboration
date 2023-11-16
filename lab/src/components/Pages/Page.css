@@ -1,0 +1,29 @@
+.post {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.11);
+  border-radius: 7px;
+  padding: 20px;
+  padding-bottom: 20px;
+  margin-left: 7%;
+  width: 86%;
+}
+
+.post h2 {
+  font-size: 25px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.upper-part {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tags {
+  display: flex;
+}
+
+.reactions {
+  cursor: pointer;
+  display: flex;
+  margin-top: 30px;
+}

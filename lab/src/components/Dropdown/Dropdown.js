@@ -1,10 +1,11 @@
 import "./DropdownStyles.css";
+import { Link } from "react-router-dom";
 
 function Dropdown(props) {
   return (
     <>
       <li className="dropdownItem">
-        <a href="">{props.text}</a>
+        <Link to="/newpost">{props.text}</Link>
       </li>
     </>
   );

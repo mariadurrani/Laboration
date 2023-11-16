@@ -11,12 +11,13 @@
   background-color: #fff;
 }
 
-.logo {
+.logo a {
   font-size: 37px;
   color: rgb(194, 43, 43);
   cursor: pointer;
   align-items: center;
   margin-left: 20px;
+  text-decoration: none;
 }
 
 .nav-menu {
