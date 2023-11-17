@@ -23,6 +23,10 @@
   display: flex;
 }
 
+.icon-container {
+  display: flex;
+}
+
 .titles p {
   font-size: 15px;
   margin-right: 10px;

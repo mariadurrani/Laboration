@@ -5,6 +5,7 @@ import SelectedPost from "../Pages/Page";
 function FetchPosts() {
   const [data, setData] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     axios
@@ -14,16 +15,32 @@ function FetchPosts() {
 
   const displayFullPost = (post) => {
     setSelectedPost(post);
+  
+    // Fetch comments for the selected post
+    axios
+      .get(`https://dummyjson.com/posts/${post.id}/comments`)
+      .then((res) => {
+        setComments(res.data.comments);
+        console.log("Comments:", res.data); // Log comments to the console
+      })
+      .catch((error) => {
+        console.error("Error fetching comments:", error);
+      });
   };
 
   const goBack = () => {
     setSelectedPost(null);
+    setComments([]); // Clear comments when going back
   };
 
   return (
     <div>
       {selectedPost ? (
-        <SelectedPost selectedPost={selectedPost} goBack={goBack} /> // Use the SelectedPost component
+        <SelectedPost
+          selectedPost={selectedPost}
+          comments={comments}
+          goBack={goBack}
+        />
       ) : (
         <div className="posts">
           <h2>All Posts</h2>

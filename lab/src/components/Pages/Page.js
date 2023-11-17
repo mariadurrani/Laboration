@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, useEffect } from "react";
 
-const SelectedPost = ({ selectedPost, goBack }) => {
+const SelectedPost = ({ selectedPost, comments, goBack }) => {
   const [reactions, setReactions] = useState(selectedPost.reactions);
 
   const incrementReactions = () => {
@@ -32,9 +32,29 @@ const SelectedPost = ({ selectedPost, goBack }) => {
           </p>
         </div>
 
+        <h3>Comments:</h3>
+        <ul>
+          <input
+            type="text"
+            id="comment"
+            placeholder="Add a comment..."
+          ></input>
+          {comments.map((comment) => (
+            <li key={comment.id}>
+              <table>
+                <tbody>
+                  <td>{comment.user.username} </td>
+                  <td>{comment.body} </td>
+                </tbody>
+              </table>
+            </li>
+          ))}
+        </ul>
+
         <button onClick={goBack}>Go Back</button>
       </div>
     </>
   );
 };
+
 export default SelectedPost;

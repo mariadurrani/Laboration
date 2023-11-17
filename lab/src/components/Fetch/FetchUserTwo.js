@@ -1,22 +1,22 @@
+// FetchUserTwo.js
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function FetchUser({ setData }) {
+function FetchUserTwo({ setDataTwo }) {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`https://dummyjson.com/users/1`)
+      .get(`https://dummyjson.com/users/2`)
       .then((res) => {
-        console.log(res.data); 
+        console.log(res.data);
         setUser(res.data);
-        setData(res.data); 
-
+        setDataTwo(res.data); 
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, [setData]);
+  }, [setDataTwo]);
 
   return (
     <>
@@ -27,4 +27,5 @@ function FetchUser({ setData }) {
   );
 }
 
-export default FetchUser;
+export default FetchUserTwo;
+
