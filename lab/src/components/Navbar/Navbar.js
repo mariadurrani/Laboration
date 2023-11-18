@@ -29,7 +29,7 @@ function Navbar() {
       </h1>
       <ul className="nav-menu">
         <div className="buttons">
-          <Link to="/"> Home</Link>
+          <Link to="/">Home</Link>
           <div onClick={togglePlusDropdown}>+</div>{" "}
           <div className={`dropdown-menu ${openPlus ? `active` : `inactive`}`}>
             <ul>

@@ -14,7 +14,6 @@ function NewPost() {
   const [selectedIcon, setSelectedIcon] = useState(null);
   const [isClicked, setIsClicked] = useState(false);
 
-  // Track user data
   const [userOneData, setUserOneData] = useState(null);
   const [userTwoData, setUserTwoData] = useState(null);
 
@@ -22,10 +21,6 @@ function NewPost() {
     setIsClicked(true);
     setSelectedIcon(icon);
   };
-
-  useEffect(() => {
-    // Cleanup function not required since there's no event listener
-  }, []);
 
   const [error, setError] = useState("");
 
@@ -50,8 +45,6 @@ function NewPost() {
           : selectedIcon === "user2" && userTwoData
           ? userTwoData.id
           : null;
-
-          
 
       if (userId !== null) {
         fetch("https://dummyjson.com/posts/add", {
